@@ -1,8 +1,9 @@
 var express = require("express");
 var app = express();
 var ExpressPeerServer = require("peer").ExpressPeerServer;
-var peerServer = ExpressPeerServer(server, { debug: true });
+var cors = require('cors');
 
+app.use(cors());
 var server = require("http").createServer(app);
 app.use(
   "/",
